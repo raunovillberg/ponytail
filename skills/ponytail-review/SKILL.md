@@ -58,6 +58,10 @@ This is a report the user asked for, so give it in full.
 
 - Every finding needs a concrete case: "this input or situation leads to this
   wrong result". No case, no finding.
+- A test must catch the real failure. Do not propose a production helper or
+  extra abstraction only to test framework wiring or arithmetic from a larger
+  interaction. Prefer an integration or UI test when those drive the result.
+  If no useful test can be run, list the behavior under `Not checked:`.
 - Re-read the lines and confirm: the caller exists, the value can really be
   empty, the code really is unused.
 - A shortcut marked with a `shortcut:` (or older `ponytail:`) comment that names its limit is a
